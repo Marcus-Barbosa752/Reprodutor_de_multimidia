@@ -1,0 +1,428 @@
+header {
+    height: 100vh;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+header .ContainerLogo {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    grid-gap: 5px;
+    margin-left: -25px;
+}
+
+header .ContainerLogo img {
+    width: 50px;
+}
+
+header .ContainerLogo h4 {
+    font-size: 17px;
+    color: white;
+}
+
+header nav {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    position: relative;
+    margin-top: -100px;
+}
+
+header nav .IndicatorSession {
+    position: absolute;
+    left: -30px;
+    top: 0px;
+    width: 8px;
+    height: 30px;
+    background: white;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+header nav button,
+header div button {
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    color: white;
+    font-size: 16px;
+}
+
+header nav button:hover,
+header div button:hover {
+    color: black;
+}
+
+header nav button img,
+header div button img {
+    height: 25px;
+    fill: white;
+}
+
+div.Conteudo {
+    width: calc(100vw - 210px);
+    height: 100vh;
+    background: #7A431A;
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.25);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding: 0;
+    overflow-y: scroll;
+}
+
+div.Conteudo::-webkit-scrollbar {
+    width: 0;
+}
+
+div.Conteudo section.Banner {
+    width: 100%;
+    height: auto;
+    background: url("https://wallpapers.com/images/high/best-profile-pictures-amip1x7pglgg1xpt.webp"), #333;
+    background-position: center;
+    background-size: cover;
+    border-top-left-radius: 20px;
+}
+
+div.Conteudo section.Banner .Top {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 25px;
+}
+
+div.Conteudo section.Banner .Top input {
+    padding: 10px 20px;
+    background: black;
+    border: none;
+    outline: none;
+    border-radius: 100px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+div.Conteudo section.Banner .Top input::placeholder {
+    color: white;
+}
+
+div.Conteudo section.Banner section.InfoUserHome {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    gap: 20px;
+}
+
+div.Conteudo section.Banner section.InfoUserHome img.InsertFotoHome {
+    width: 35px;
+    border-radius: 10px;
+}
+
+div.Conteudo section.Banner section.InfoUserHome .InsertFotoeNome {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: black;
+    padding: 7px;
+    border-radius: 20px;
+    font-size: 15px;
+}
+
+div.Conteudo section.Banner section.InfoUserHome img.Phone {
+    width: 30px;
+}
+
+div.Conteudo section.Banner div.Slider {
+    position: relative;
+}
+
+div.Conteudo section.Banner div.Slider div.Imagens {
+    width: 300px;
+    display: flex;
+}
+
+div.Conteudo section.Banner div.Slider section.Principal {
+    width: 100%;
+    height: auto;
+    padding: 10px 30px;
+}
+
+div.Conteudo section.Banner div.Slider section.Principal img.FotoPrincipalSlider {
+    width: 160px;
+    border-radius: 10px;
+}
+
+div.Conteudo section.Banner div.Slider section.Principal img.FotoPrincipalSlider:hover {
+    box-shadow: 0 0 10px black;
+}
+
+div.Conteudo section.Banner div.Slider section.Proximo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+
+div.Conteudo section.Banner div.Slider section.Proximo h4 {
+    font-size: 25px;
+    color: white;
+}
+
+div.Conteudo section.Banner div.Slider section.Proximo .InsertProxImagert {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+div.Conteudo section.Banner div.Slider section.Proximo .InsertProxImagert img {
+    width: 100px;
+    border-radius: 10px;
+}
+
+div.Conteudo section.Banner div.Slider section.Proximo .InsertProxImagert img:hover {
+    animation: pulsate-fwd 0.5s ease-in-out infinite both;
+}
+
+@keyframes pulsate-fwd {
+
+    0%,
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        box-shadow: 0 0 0 transparent;
+    }
+
+    50% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+        box-shadow: 0 0 10px black;
+    }
+}
+
+div.Conteudo section.Banner div.Slider .Controles {
+    position: absolute;
+    right: 10px;
+    bottom: -25px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: white;
+    border-radius: 100px;
+    border: solid #7A431A 4px;
+}
+
+div.Conteudo section.Banner div.Slider .Controles button {
+    background: black;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    border: none;
+}
+
+div.Conteudo section.Banner div.Slider .Controles button img {
+    height: 20px;
+}
+
+div.Conteudo section.Banner div.Slider .Controles button:hover {
+    background: gray;
+    box-shadow: 0 0 10px black;
+}
+
+div.Conteudo h4 {
+    margin: 20px;
+    color: white;
+    font-size: 20px;
+}
+
+div.Conteudo section.SectionDiretoriosHome,
+div.Conteudo section.SectionMusicHome,
+div.Conteudo section.SectionVideoHome {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(2, auto);
+    gap: 15px 10px;
+    padding: 10px 20px;
+    overflow-x: auto;
+    width: 100%;
+}
+
+div.Conteudo section.SectionDiretoriosHome::-webkit-scrollbar,
+div.Conteudo section.SectionMusicHome::-webkit-scrollbar,
+div.Conteudo section.SectionVideoHome::-webkit-scrollbar {
+    height: 0;
+}
+
+div.Conteudo section.SectionDiretoriosHome .DiretoriosFolder {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    height: 80px;
+    width: 290px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+div.Conteudo section.SectionDiretoriosHome .DiretoriosFolder .FolderIco {
+    background: white;
+    width: 100px;
+    height: 100%;
+    border-radius: 10px;
+    position: relative;
+}
+
+div.Conteudo section.SectionDiretoriosHome .DiretoriosFolder:hover .FolderIco {
+    animation: pulsate-fwd 0.5s ease-in-out infinite both;
+}
+
+div.Conteudo section.SectionDiretoriosHome .DiretoriosFolder .FolderIco::after {
+    position: absolute;
+    content: '';
+    top: 10px;
+    width: 100%;
+    height: 8px;
+    background: #7A431A;
+}
+
+div.Conteudo section.SectionDiretoriosHome .DiretoriosFolder .FolderIco::before {
+    position: absolute;
+    content: "";
+    width: 60%;
+    height: 30px;
+    background: white;
+    left: 0;
+    top: -10px;
+    border-radius: 10px;
+    border-top-right-radius: 100px;
+}
+
+div.Conteudo section.SectionDiretoriosHome .DiretoriosFolder .FolderInfo {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+div.Conteudo section.SectionDiretoriosHome .DiretoriosFolder .FolderInfo h3,
+div.Conteudo section.SectionDiretoriosHome .DiretoriosFolder .FolderInfo span {
+    color: white;
+}
+
+div.Conteudo section.SectionDiretoriosHome .DiretoriosFolder .FolderInfo h3 {
+    font-size: 17px;
+}
+
+div.Conteudo section.SectionDiretoriosHome .DiretoriosFolder .FolderInfo span {
+    font-size: 16px;
+}
+
+div.Conteudo section.SectionMusicHome .CardMusic {
+    width: 200px;
+    height: 240px;
+    border-radius: 20px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+div.Conteudo section.SectionMusicHome .CardMusic:hover {
+    box-shadow: 0 0 10px black;
+}
+
+div.Conteudo section.SectionMusicHome .CardMusic img.CapaMusic {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    z-index: -1;
+}
+
+div.Conteudo section.SectionMusicHome .CardMusic .InfoCardInfo {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.349);
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+    backdrop-filter: blur(10px);
+}
+
+div.Conteudo section.SectionMusicHome .CardMusic .InfoCardInfo h3 {
+    width: 100%;
+    text-align: left;
+    color: white;
+    font-size: 20px;
+}
+
+div.Conteudo section.SectionMusicHome .CardMusic .InfoCardInfo img {
+    width: 20px;
+}
+div.Conteudo section.SectionVideoHome .CardVideo {
+    width: 230px;
+    height: 260px;
+    background: white;
+    border-radius: 20px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+div.Conteudo section.SectionVideoHome .CardVideo img.CapaVideo {
+    width: 100%;
+    height: 55%;
+    border-radius: inherit;
+}
+div.Conteudo section.SectionVideoHome .CardVideo .InfoVideo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 10px;
+}
+div.Conteudo section.SectionVideoHome .CardVideo .InfoVideo h3 {
+    width: 100%;
+    text-align: left;
+    font-size: 20px;
+}
+div.Conteudo section.SectionVideoHome .CardVideo .InfoVideo .CategoriasVideo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    width: 100%;
+}
+div.Conteudo section.SectionVideoHome .CardVideo .InfoVideo .CategoriasVideo span {
+    background: grey;
+    padding: 3px 10px;
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 15px;
+}
+div.Conteudo section.SectionVideoHome .CardVideo .InfoVideo img.IcoPlay {
+    width: 30px;
+    border-radius: 10px;
+}
+div.Conteudo section.SectionVideoHome .CardVideo .InfoVideo img.IcoPlay:hover {
+    padding: 5px;
+    background: rgb(218, 218, 218);
+    box-shadow: 0 0 10px black;
+}
