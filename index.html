@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>🎵🎬 Minhas Mídias</title>
+</head>
+
+<body>
+    <h1>Gerenciador de Músicas e Vídeos</h1>
+
+    <form id="mediaForm">
+        <input type="text" id="title" placeholder="Título" required>
+        <select id="type" required>
+            <option value="music">Música</option>
+            <option value="video">Vídeo</option>
+        </select>
+        <input type="url" id="url" placeholder="URL da mídia" required>
+        <button type="submit">Adicionar</button>
+    </form>
+
+    <h2>Lista de Mídias</h2>
+    <ul id="mediaList"></ul>
+
+    <script>
+        const apiUrl = "http://localhost:3000/api/media"
+
+        async function carregarMidias() {
+            const res = await fetch(apiUrl)
+            const data = await res.json()
+            const list = document.getElementById("mediaList")
+
+            list.innerHTML = ""
+
+            data.forEach(item => {
+                const li = document.createElement("li")
+                li.innerHTML = `<strong>${item.title}</strong> (${item.type}) - <a href="${item.url}" target="_blank">${item.url}</a>`
+                const btn = document.createElement("button")
+
+                btn.textContent = "❌"
+                btn.onclick = async () => {
+                    await fetch(`${apiUrl}/${item.id}`, { method: "DELETE" })
+                    carregarMidias()
+                }
+                li.appendChild(btn)
+                list.appendChild(li)
+            })
+        }
+
+        document.getElementById("mediaForm").onsubmit = async (e) => {
+            e.preventDefault()
+
+            const title = document.getElementById("title").value
+            const type = document.getElementById("type").value
+            const url = document.getElementById("url").value
+
+            await fetch(apiUrl, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ title, type, url })
+            })
+
+            e.target.reset()
+            carregarMidias()
+        }
+
+        carregarMidias()
+    </script>
+</body>
+
+</html>
