@@ -70,7 +70,7 @@ header div button img {
 div.Conteudo {
     width: calc(100vw - 210px);
     height: 100vh;
-    background: #7A431A;
+    background: var(--Bg-PopUp-Padrao);
     box-shadow: -4px 0 10px rgba(0, 0, 0, 0.25);
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
