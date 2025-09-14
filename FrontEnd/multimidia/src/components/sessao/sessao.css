@@ -188,3 +188,162 @@ section.PlaylistSession .MusicasPlaylists .PlayLists .InsertPlaylist .CardAlbum 
     font-weight: bold;
     font-size: 15px;
 }
+section.PastasSession {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    background: var(--Bg-PopUp-Padrao);
+    width: calc(100vw - 210px);
+    height: 100vh;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    z-index: 2;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+section.PastasSession::-webkit-scrollbar {
+    width: 0;
+}
+section.PastasSession div.HeaderPastas {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    margin-bottom: 40px;
+}
+section.PastasSession div.HeaderPastas input {
+    padding: 10px;
+    width: 270px;
+    background: black;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+section.PastasSession div.HeaderPastas input::placeholder {color: white;}
+section.PastasSession div.HeaderPastas .ContainerFilterPastas {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: solid white 2px;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 0 10px 0 0;
+}
+section.PastasSession div.HeaderPastas .ContainerFilterPastas .Left {
+    padding: 10px 20px;
+    background: white;
+    font-weight: bold;
+    font-size: 15px;
+    height: 33px;
+    margin-top: -4px;
+    display: grid;
+    place-items: center;
+    border-top-right-radius: inherit;
+    border-bottom-right-radius: inherit;
+}
+section.PastasSession div.HeaderPastas .ContainerFilterPastas img {
+    width: 20px;
+}
+section.PastasSession h4 {
+    margin: 20px;
+    font-size: 20px;
+}
+section.PastasSession section.InsertPastas {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    padding: 10px;
+}
+section.PastasSession section.InsertPastas::-webkit-scrollbar {
+    height: 0;
+}
+section.PastasSession section.InsertPastas .CardPastas {
+    display: grid;
+    place-items: center;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    flex: 0 0 10%;
+}
+section.PastasSession section.InsertPastas .CardPastas:hover {
+    background: black;
+    color: white;
+    box-shadow: 0 0 10px black;
+}
+section.PastasSession section.InsertPastas .CardPastas img {
+    width: 80px;
+}
+section.PastasSession section.InsertPastas .CardPastas h4 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 16px;
+}
+section.InsertMusicas {
+    width: 100%;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(2, auto);
+    gap: 15px 30px;
+    overflow-x: auto;
+    padding: 10px;
+}
+section.InsertMusicas::-webkit-scrollbar {
+    height: 0;
+}
+section.InsertMusicas .CardMusicFolder {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 10px;
+}
+section.InsertMusicas .CardMusicFolder .Left .IcoPasta {
+    position: relative;
+    width: 100px;
+    height: 60px;
+    background: white;
+    border-radius: 10px;
+    transform: translateY(10px);
+}
+section.InsertMusicas .CardMusicFolder .Left .IcoPasta::after {
+    position: absolute;
+    content: "";
+    top: -10px;
+    left: 0;
+    width: 55%;
+    height: 30px;
+    background: inherit;
+    border-radius: inherit;
+    border-top-right-radius: 20px;
+}
+section.InsertMusicas .CardMusicFolder:hover .Left .IcoPasta {
+    background: black;
+    filter: drop-shadow(0 0 5px black);
+}
+section.InsertMusicas .CardMusicFolder .Info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+section.InsertMusicas .CardMusicFolder .Info h4 {
+    font-size: 20px;
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    margin-left: 0;
+}
+section.InsertMusicas .CardMusicFolder .Info span {
+    font-size: 17px;
+    color: rgba(255, 255, 255, .60);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
