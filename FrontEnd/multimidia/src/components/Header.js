@@ -1,4 +1,4 @@
-import Style from "./Style.css"
+import "./Style.css"
 import Logo from "../Images/Logo.png"
 import Nav from "./Nav"
 
